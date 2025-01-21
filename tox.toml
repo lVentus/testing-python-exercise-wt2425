@@ -1,0 +1,10 @@
+requires = ["tox>=4"]
+env_list = ["testing"]
+
+[env.testing]
+desciption = "Run pytest and unittest"
+deps = ["-r requirements.txt"]
+commands = [
+    ["python", "-m", "pytest"],
+    ["python", "-m", "unittest", "discover", "-s", "tests/unit"]
+]
